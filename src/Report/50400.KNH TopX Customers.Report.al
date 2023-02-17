@@ -1,7 +1,7 @@
 /// <summary>
-/// Report 50400cCustomer Overview (ID 50002).
+/// Report KNH TopX Customers (ID 50400).
 /// </summary>h 
-report 50400 "KNH Customer Overview"
+report 50400 "KNH TopX Customers"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src\Report\Layouts\KNH Customer Overview.rdlc';
@@ -27,16 +27,16 @@ report 50400 "KNH Customer Overview"
             trigger OnPreDataItem()
             begin
                 SetRange(Number, 1, TopX);
-                TopXCustomers.TopNumberOfRows(TopX);
-                TopXCustomers.Open();
+                KNHCustomerOverview.TopNumberOfRows(TopX);
+                KNHCustomerOverview.Open();
             end;
 
             trigger OnAfterGetRecord()
             begin
-                if TopXCustomers.Read() then begin
-                    CustomerNo := TopXCustomers.No;
-                    CustomerName := TopXCustomers.Name;
-                    CustBalance := TopXCustomers.BalanceLCY;
+                if KNHCustomerOverview.Read() then begin
+                    CustomerNo := KNHCustomerOverview.No;
+                    CustomerName := KNHCustomerOverview.Name;
+                    CustBalance := KNHCustomerOverview.BalanceLCY;
                 end else
                     CurrReport.Skip();
             end;
@@ -54,7 +54,7 @@ report 50400 "KNH Customer Overview"
                     field(Top_X; TopX)
                     {
                         ApplicationArea = All;
-                        Caption = 'TopX?';
+                        Caption = 'TopX';
                         ToolTip = 'TopX';
                     }
                 }
@@ -69,11 +69,11 @@ report 50400 "KNH Customer Overview"
 
     trigger OnPostReport()
     begin
-        TopXCustomers.Close();
+        KNHCustomerOverview.Close();
     end;
 
     var
-        TopXCustomers: Query "KNH Customer Overview";
+        KNHCustomerOverview: Query "KNH Customer Overview";
         CustomerNo: Code[20];
         CustomerName: Text[50];
         CustBalance: Decimal;

@@ -2,21 +2,17 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Keith-Notebook",
+            "name": "RemoteRecords",
             "request": "launch",
             "type": "al",
-            "environmentType": "OnPrem",
-            "server": "http://keith-notebook",
-            "serverInstance": "BC200",
-            "authentication": "Windows",
-            "startupObjectId": 9006,
+            "environmentType": "Production",
+            "environmentName": "Production",
+            "startupObjectId": 2500,
             "startupObjectType": "Page",
-            "port": 7649,
-            "breakOnError": true,
+            "breakOnError": "All",
             "launchBrowser": true,
             "enableLongRunningSqlStatements": true,
-            "enableSqlInformationDebugger": true,
-            "tenant": "default"
+            "enableSqlInformationDebugger": true
         }
     ]
 }

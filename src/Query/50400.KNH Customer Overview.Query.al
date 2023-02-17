@@ -45,7 +45,7 @@ query 50400 "KNH Customer Overview"
                 SqlJoinType = InnerJoin;
                 DataItemTableFilter = "Document Type" = FILTER(Invoice | "Credit Memo");
 
-                Column(DocumentType; "Document Type")
+                column(DocumentType; "Document Type")
                 {
                 }
                 column(DocumentNo; "Document No.")
