@@ -6,7 +6,6 @@ permissionset 50400 "KNH Cust Overview"
     Assignable = true;
     Caption = 'Customer Overview', MaxLength = 30;
     Permissions =
-        codeunit "KNH Customer Overview" = X,
-        query "KNH Customer Overview" = X,
+        query "KNH Customer Query" = X,
         report "KNH TopX Customers" = X;
 }

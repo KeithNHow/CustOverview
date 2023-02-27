@@ -1,9 +1,10 @@
 /// <summary>
-/// Query CustomerOverview (ID 50000)
+/// Query CustomerOverview (ID 50040)
+/// Query based on Customer where Curr Code = blank, and CLE = Invoice or Credit Memo  
 /// </summary>
-query 50400 "KNH Customer Overview"
+query 50400 "KNH Customer Query"
 {
-    Caption = 'Customer Overview';
+    Caption = 'Customer Query';
     QueryType = Normal;
     OrderBy = descending(BalanceLCY);
 
@@ -43,7 +44,7 @@ query 50400 "KNH Customer Overview"
             {
                 DataItemLink = "Customer No." = Customer."No.";
                 SqlJoinType = InnerJoin;
-                DataItemTableFilter = "Document Type" = FILTER(Invoice | "Credit Memo");
+                DataItemTableFilter = "Document Type" = filter(Invoice | "Credit Memo");
 
                 column(DocumentType; "Document Type")
                 {

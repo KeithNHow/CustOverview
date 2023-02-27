@@ -1,5 +1,9 @@
 /// <summary>
 /// Report KNH TopX Customers (ID 50400).
+/// Set number of required records
+/// Filter dataitem by number of required records
+/// Read data from query, pop variables
+/// Show record on report
 /// </summary>h 
 report 50400 "KNH TopX Customers"
 {
@@ -27,16 +31,15 @@ report 50400 "KNH TopX Customers"
             trigger OnPreDataItem()
             begin
                 SetRange(Number, 1, TopX);
-                KNHCustomerOverview.TopNumberOfRows(TopX);
-                KNHCustomerOverview.Open();
+                KNHCustomerQuery.Open();
             end;
 
             trigger OnAfterGetRecord()
             begin
-                if KNHCustomerOverview.Read() then begin
-                    CustomerNo := KNHCustomerOverview.No;
-                    CustomerName := KNHCustomerOverview.Name;
-                    CustBalance := KNHCustomerOverview.BalanceLCY;
+                if KNHCustomerQuery.Read() then begin
+                    CustomerNo := KNHCustomerQuery.No;
+                    CustomerName := KNHCustomerQuery.Name;
+                    CustBalance := KNHCustomerQuery.BalanceLCY;
                 end else
                     CurrReport.Skip();
             end;
@@ -69,11 +72,11 @@ report 50400 "KNH TopX Customers"
 
     trigger OnPostReport()
     begin
-        KNHCustomerOverview.Close();
+        KNHCustomerQuery.Close();
     end;
 
     var
-        KNHCustomerOverview: Query "KNH Customer Overview";
+        KNHCustomerQuery: Query "KNH Customer Query";
         CustomerNo: Code[20];
         CustomerName: Text[50];
         CustBalance: Decimal;
