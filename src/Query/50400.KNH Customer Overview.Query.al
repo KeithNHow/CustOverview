@@ -5,7 +5,7 @@ query 50400 "KNH Customer Overview"
 {
     Caption = 'Customer Overview';
     QueryType = Normal;
-    OrderBy = Descending(BalanceLCY);
+    OrderBy = descending(BalanceLCY);
 
     elements
     {

@@ -4,9 +4,9 @@
 report 50400 "KNH TopX Customers"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = 'src\Report\Layouts\KNH Customer Overview.rdlc';
+    RDLCLayout = 'src\Report\Layouts\KNH TopX Customers.rdlc';
     ApplicationArea = All;
-    Caption = 'Customer Overview';
+    Caption = 'TopX Customers';
     UsageCategory = ReportsAndAnalysis;
 
     dataset
@@ -78,5 +78,4 @@ report 50400 "KNH TopX Customers"
         CustomerName: Text[50];
         CustBalance: Decimal;
         TopX: Integer;
-
 }
