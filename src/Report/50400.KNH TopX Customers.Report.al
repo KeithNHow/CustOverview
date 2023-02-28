@@ -7,8 +7,9 @@
 /// </summary>h 
 report 50400 "KNH TopX Customers"
 {
-    DefaultLayout = RDLC;
-    RDLCLayout = 'src\Report\Layouts\KNH TopX Customers.rdlc';
+    //DefaultLayout = RDLC;
+    //RDLCLayout = 'src\Report\Layouts\KNHTopXCustomers.rdlc';
+    DefaultRenderingLayout = RDLCLayout;
     ApplicationArea = All;
     Caption = 'TopX Customers';
     UsageCategory = ReportsAndAnalysis;
@@ -62,6 +63,31 @@ report 50400 "KNH TopX Customers"
                     }
                 }
             }
+        }
+    }
+
+    rendering
+    {
+        layout(RDLCLayout)
+        {
+            Type = RDLC;
+            LayoutFile = './Layouts/KNHTopXCustomers.rdlc';
+            Caption = 'TopX Customers (RDL)';
+            Summary = 'Legacy layout';
+        }
+        layout(WordLayout)
+        {
+            Type = Word;
+            LayoutFile = './Layouts/KNHTopXCustomers.docx';
+            Caption = 'TopX Customers (Word)';
+            Summary = 'Layout suitable for user facing documents.';
+        }
+        layout(ExcelLayout)
+        {
+            Type = Excel;
+            LayoutFile = './Layouts/KNHTopXCustomers.xlsx';
+            Caption = 'TopX Customers (Excel)';
+            Summary = 'Layout suitable for reports.';
         }
     }
 

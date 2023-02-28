@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="PrintAmountsInLCY">
+          <DataField>PrintAmountsInLCY</DataField>
+        </Field>
+        <Field Name="G_L_Register__TABLECAPTION__________GLRegFilter">
+          <DataField>G_L_Register__TABLECAPTION__________GLRegFilter</DataField>
+        </Field>
+        <Field Name="GLRegFilter">
+          <DataField>GLRegFilter</DataField>
+        </Field>
+        <Field Name="G_L_Register__No__">
+          <DataField>G_L_Register__No__</DataField>
+        </Field>
+        <Field Name="VendDebitAmountLCY">
+          <DataField>VendDebitAmountLCY</DataField>
+        </Field>
+        <Field Name="VendDebitAmountLCYFormat">
+          <DataField>VendDebitAmountLCYFormat</DataField>
+        </Field>
+        <Field Name="VendCreditAmountLCY">
+          <DataField>VendCreditAmountLCY</DataField>
+        </Field>
+        <Field Name="VendCreditAmountLCYFormat">
+          <DataField>VendCreditAmountLCYFormat</DataField>
+        </Field>
+        <Field Name="VendAmountLCY">
+          <DataField>VendAmountLCY</DataField>
+        </Field>
+        <Field Name="VendAmountLCYFormat">
+          <DataField>VendAmountLCYFormat</DataField>
+        </Field>
+        <Field Name="Vendor_RegisterCaption">
+          <DataField>Vendor_RegisterCaption</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="All_amounts_are_in_LCYCaption">
+          <DataField>All_amounts_are_in_LCYCaption</DataField>
+        </Field>
+        <Field Name="Vendor_Ledger_Entry__Posting_Date_Caption">
+          <DataField>Vendor_Ledger_Entry__Posting_Date_Caption</DataField>
+        </Field>
+        <Field Name="Vendor_Ledger_Entry__Document_Type_Caption">
+          <DataField>Vendor_Ledger_Entry__Document_Type_Caption</DataField>
+        </Field>
+        <Field Name="Vendor_Ledger_Entry__Document_No__Caption">
+          <DataField>Vendor_Ledger_Entry__Document_No__Caption</DataField>
+        </Field>
+        <Field Name="Vendor_Ledger_Entry_DescriptionCaption">
+          <DataField>Vendor_Ledger_Entry_DescriptionCaption</DataField>
+        </Field>
+        <Field Name="Vendor_Ledger_Entry__Vendor_No__Caption">
+          <DataField>Vendor_Ledger_Entry__Vendor_No__Caption</DataField>
+        </Field>
+        <Field Name="Vend_NameCaption">
+          <DataField>Vend_NameCaption</DataField>
+        </Field>
+        <Field Name="VendAmountCaption">
+          <DataField>VendAmountCaption</DataField>
+        </Field>
+        <Field Name="Vendor_Ledger_Entry__Applies_to_Doc__No__Caption">
+          <DataField>Vendor_Ledger_Entry__Applies_to_Doc__No__Caption</DataField>
+        </Field>
+        <Field Name="Vendor_Ledger_Entry__Due_Date_Caption">
+          <DataField>Vendor_Ledger_Entry__Due_Date_Caption</DataField>
+        </Field>
+        <Field Name="Vendor_Ledger_Entry__Entry_No__Caption">
+          <DataField>Vendor_Ledger_Entry__Entry_No__Caption</DataField>
+        </Field>
+        <Field Name="G_L_Register__No__Caption">
+          <DataField>G_L_Register__No__Caption</DataField>
+        </Field>
+        <Field Name="TotalCaption">
+          <DataField>TotalCaption</DataField>
+        </Field>
+        <Field Name="VendDebitAmountLCYCaption">
+          <DataField>VendDebitAmountLCYCaption</DataField>
+        </Field>
+        <Field Name="VendCreditAmountLCYCaption">
+          <DataField>VendCreditAmountLCYCaption</DataField>
+        </Field>
+        <Field Name="VendAmountLCYCaption">
+          <DataField>VendAmountLCYCaption</DataField>
+        </Field>
+        <Field Name="Vendor_Ledger_Entry__Posting_Date_">
+          <DataField>Vendor_Ledger_Entry__Posting_Date_</DataField>
+        </Field>
+        <Field Name="Vendor_Ledger_Entry__Document_Type_">
+          <DataField>Vendor_Ledger_Entry__Document_Type_</DataField>
+        </Field>
+        <Field Name="Vendor_Ledger_Entry__Document_No__">
+          <DataField>Vendor_Ledger_Entry__Document_No__</DataField>
+        </Field>
+        <Field Name="Vendor_Ledger_Entry_Description">
+          <DataField>Vendor_Ledger_Entry_Description</DataField>
+        </Field>
+        <Field Name="Vendor_Ledger_Entry__Vendor_No__">
+          <DataField>Vendor_Ledger_Entry__Vendor_No__</DataField>
+        </Field>
+        <Field Name="Vend_Name">
+          <DataField>Vend_Name</DataField>
+        </Field>
+        <Field Name="VendAmount">
+          <DataField>VendAmount</DataField>
+        </Field>
+        <Field Name="VendAmountFormat">
+          <DataField>VendAmountFormat</DataField>
+        </Field>
+        <Field Name="Vendor_Ledger_Entry__Currency_Code_">
+          <DataField>Vendor_Ledger_Entry__Currency_Code_</DataField>
+        </Field>
+        <Field Name="Vendor_Ledger_Entry__Applies_to_Doc__No__">
+          <DataField>Vendor_Ledger_Entry__Applies_to_Doc__No__</DataField>
+        </Field>
+        <Field Name="Vendor_Ledger_Entry__Due_Date_">
+          <DataField>Vendor_Ledger_Entry__Due_Date_</DataField>
+        </Field>
+        <Field Name="Vendor_Ledger_Entry__Entry_No__">
+          <DataField>Vendor_Ledger_Entry__Entry_No__</DataField>
+        </Field>
+        <Field Name="VendDebitAmountLCY_Control61">
+          <DataField>VendDebitAmountLCY_Control61</DataField>
+        </Field>
+        <Field Name="VendDebitAmountLCY_Control61Format">
+          <DataField>VendDebitAmountLCY_Control61Format</DataField>
+        </Field>
+        <Field Name="VendCreditAmountLCY_Control64">
+          <DataField>VendCreditAmountLCY_Control64</DataField>
+        </Field>
+        <Field Name="VendCreditAmountLCY_Control64Format">
+          <DataField>VendCreditAmountLCY_Control64Format</DataField>
+        </Field>
+        <Field Name="VendAmountLCY_Control67">
+          <DataField>VendAmountLCY_Control67</DataField>
+        </Field>
+        <Field Name="VendAmountLCY_Control67Format">
+          <DataField>VendAmountLCY_Control67Format</DataField>
+        </Field>
+        <Field Name="VendDebitAmountLCY_Control61Caption">
+          <DataField>VendDebitAmountLCY_Control61Caption</DataField>
+        </Field>
+        <Field Name="VendCreditAmountLCY_Control64Caption">
+          <DataField>VendCreditAmountLCY_Control64Caption</DataField>
+        </Field>
+        <Field Name="VendAmountLCY_Control67Caption">
+          <DataField>VendAmountLCY_Control67Caption</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
