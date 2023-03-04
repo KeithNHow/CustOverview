@@ -2,7 +2,7 @@
 /// Query CustomerOverview (ID 50040)
 /// Query based on Customer where Curr Code = blank, and CLE = Invoice or Credit Memo  
 /// </summary>
-query 50400 "KNH Customer Query"
+query 50400 "KNH_CustomerQuery"
 {
     Caption = 'Customer Query';
     QueryType = Normal;

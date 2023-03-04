@@ -5,7 +5,7 @@
 /// Read data from query, pop variables
 /// Show record on report
 /// </summary>h 
-report 50400 "KNH TopX Customers"
+report 50400 "KNH_TopX_Customers"
 {
     //DefaultLayout = RDLC;
     //RDLCLayout = 'src\Report\Layouts\KNHTopXCustomers.rdlc';
@@ -102,7 +102,7 @@ report 50400 "KNH TopX Customers"
     end;
 
     var
-        KNHCustomerQuery: Query "KNH Customer Query";
+        KNHCustomerQuery: Query "KNH_CustomerQuery";
         CustomerNo: Code[20];
         CustomerName: Text[50];
         CustBalance: Decimal;
