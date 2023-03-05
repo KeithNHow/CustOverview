@@ -39,7 +39,7 @@ report 50400 "KNH_TopX_Customers"
             begin
                 if KNHCustomerQuery.Read() then begin
                     CustomerNo := KNHCustomerQuery.No;
-                    CustomerName := KNHCustomerQuery.Name;
+                    CustomerName := "KNHCustomerQuery".Name;
                     CustBalance := KNHCustomerQuery.BalanceLCY;
                 end else
                     CurrReport.Skip();
