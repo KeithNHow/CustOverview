@@ -2,7 +2,7 @@
   "id": "3215b2d0-345a-43f7-979d-36284c2022a2",
   "name": "Customer Overview",
   "publisher": "Keith How",
-  "version": "1.0.0.3",
+  "version": "1.0.0.4",
   "brief": "Customer Overview",
   "description": "Customer Overview",
   "privacyStatement": "",
@@ -13,7 +13,7 @@
   "dependencies": [],
   "screenshots": [],
   "platform": "1.0.0.0",
-  "application": "20.0.0.0",
+  "application": "25.0.0.0",
   "idRanges": [
     {
       "from": 50400,
@@ -25,5 +25,5 @@
     "allowDownloadingSource": false,
     "includeSourceInSymbolFile": false
   },
-  "runtime": "9.0"
+  "runtime": "14.0"
 }
