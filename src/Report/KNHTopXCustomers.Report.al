@@ -5,7 +5,7 @@
 /// Read data from query, pop variables
 /// Show record on report
 /// </summary>h 
-report 50400 "KNH_TopX_Customers"
+report 50400 KNH_TopX_Customers
 {
     //DefaultLayout = RDLC;
     //RDLCLayout = 'src\Report\Layouts\KNHTopXCustomers.rdlc';
@@ -39,7 +39,7 @@ report 50400 "KNH_TopX_Customers"
             begin
                 if KNHCustomerQuery.Read() then begin
                     CustomerNo := KNHCustomerQuery.No;
-                    CustomerName := "KNHCustomerQuery".Name;
+                    CustomerName := KNHCustomerQuery.Name;
                     CustBalance := KNHCustomerQuery.BalanceLCY;
                 end else
                     CurrReport.Skip();
@@ -51,7 +51,7 @@ report 50400 "KNH_TopX_Customers"
     {
         layout
         {
-            area(content)
+            area(Content)
             {
                 group(GroupName)
                 {
@@ -102,9 +102,9 @@ report 50400 "KNH_TopX_Customers"
     end;
 
     var
-        KNHCustomerQuery: Query "KNH_CustomerQuery";
+        KNHCustomerQuery: Query KNH_CustomerQuery;
         CustomerNo: Code[20];
-        CustomerName: Text[50];
         CustBalance: Decimal;
         TopX: Integer;
+        CustomerName: Text[50];
 }

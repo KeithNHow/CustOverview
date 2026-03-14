@@ -29,7 +29,7 @@ report 50402 KNH_Datafix
     {
         layout
         {
-            area(content)
+            area(Content)
             {
                 group(Options)
                 {

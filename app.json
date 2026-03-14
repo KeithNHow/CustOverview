@@ -1,8 +1,8 @@
 {
   "id": "3215b2d0-345a-43f7-979d-36284c2022a2",
   "name": "Customer Overview",
-  "publisher": "Keith How",
-  "version": "1.0.0.4",
+  "publisher": "KeithHow",
+  "version": "27.0.0.0",
   "brief": "Customer Overview",
   "description": "Customer Overview",
   "privacyStatement": "",
@@ -12,8 +12,8 @@
   "logo": "./logo/KNH.jpg",
   "dependencies": [],
   "screenshots": [],
-  "platform": "1.0.0.0",
-  "application": "25.0.0.0",
+  "platform": "27.0.0.0",
+  "application": "27.0.0.0",
   "idRanges": [
     {
       "from": 50400,
@@ -25,5 +25,5 @@
     "allowDownloadingSource": false,
     "includeSourceInSymbolFile": false
   },
-  "runtime": "14.0"
+  "runtime": "16.0"
 }
