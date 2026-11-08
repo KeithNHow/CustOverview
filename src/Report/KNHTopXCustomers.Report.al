@@ -4,8 +4,11 @@
 /// Filter dataitem by number of required records
 /// Read data from query, pop variables
 /// Show record on report
-/// </summary>h 
-report 50400 KNH_TopX_Customers
+/// </summary>
+namespace KNHCustOverview;
+Using System.Utilities;
+
+report 50400 "KNH_TopX_Customers"
 {
     //DefaultLayout = RDLC;
     //RDLCLayout = 'src\Report\Layouts\KNHTopXCustomers.rdlc';

@@ -1,7 +1,9 @@
 /// <summary>
 /// PermSet "KNH Cust Overview"" (ID 50400).
 /// </summary>
-permissionset 50400 KNH_CustOverview
+namespace KNHCustOverview;
+
+permissionset 50400 "KNH_CustOverview"
 {
     Assignable = true;
     Caption = 'Customer Overview', MaxLength = 30;

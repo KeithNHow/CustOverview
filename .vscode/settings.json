@@ -12,7 +12,7 @@
         "editor.codeLens": false,
         "editor.semanticHighlighting.enabled": true,
     },
-
+    "al.useVsCodeAuthentication": false,
     "al.ruleSetPath": "./.vscode/ruleset.json",
     "al.backgroundCodeAnalysis": true,
     "al.enableCodeActions": true,

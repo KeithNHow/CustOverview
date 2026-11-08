@@ -2,7 +2,10 @@
 /// Page Demo Order Proc. (ID 50400) Extends Order Processor Role Center 9006
 /// New action to show report
 /// </summary>
-pageextension 50400 KNH_OrderProcessing extends "Order Processor Role Center"
+namespace KNHCustOverview;
+using Microsoft.Sales.RoleCenters;
+
+pageextension 50400 "KNH_OrderProcessing" extends "Order Processor Role Center"
 {
     actions
     {

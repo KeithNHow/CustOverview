@@ -2,7 +2,11 @@
 /// Query CustomerOverview (ID 50040)
 /// Query based on Customer where Curr Code = blank, and CLE = Invoice or Credit Memo  
 /// </summary>
-query 50400 KNH_CustomerQuery
+namespace KNHCustOverview;
+using Microsoft.Sales.Customer;
+using Microsoft.Sales.Receivables;
+
+query 50400 "KNH_CustomerQuery"
 {
     Caption = 'Customer Query';
     QueryType = Normal;

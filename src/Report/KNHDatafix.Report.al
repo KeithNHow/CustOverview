@@ -1,6 +1,9 @@
 /// <summary>
 /// Report "KNH_Datafix" (ID 50402).
 /// </summary>
+namespace KNHCustOverview;
+using Microsoft.Sales.Customer;
+
 report 50402 KNH_Datafix
 {
     ApplicationArea = All;

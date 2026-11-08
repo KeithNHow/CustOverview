@@ -2,7 +2,10 @@
 /// TableExtension "KNH_Customer Duplicates" (ID 50400) extends Record Customer.
 /// Indicate that customer record already exists with the same name. 
 /// </summary>
-tableextension 50400 KNH_CustomerDuplicates extends Customer
+namespace KNHCustOverview;
+using Microsoft.Sales.Customer;
+
+tableextension 50400 "KNH_CustomerDuplicates" extends Customer
 {
     fields
     {
